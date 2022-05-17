@@ -1,12 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import 'jquery/dist/jquery.min.js';
+import 'popper.js/dist/umd/popper.min.js';
+import 'bootstrap/dist/js/bootstrap.min.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
+import {Provider} from 'react-redux';
+import store from './store'//toi store se tu tim toi index
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+    {/* Provider: ket noi store cho toan bo app */}
+    <Provider store={store}>
     <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
